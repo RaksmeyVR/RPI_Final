@@ -610,7 +610,7 @@ Partial Class FormMain
         Me.LabelHome.BackColor = System.Drawing.Color.Transparent
         Me.LabelHome.Font = New System.Drawing.Font("Khmer OS Muol", 13.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelHome.ForeColor = System.Drawing.Color.Brown
-        Me.LabelHome.Location = New System.Drawing.Point(94, 63)
+        Me.LabelHome.Location = New System.Drawing.Point(88, 50)
         Me.LabelHome.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.LabelHome.Name = "LabelHome"
         Me.LabelHome.Size = New System.Drawing.Size(563, 37)
