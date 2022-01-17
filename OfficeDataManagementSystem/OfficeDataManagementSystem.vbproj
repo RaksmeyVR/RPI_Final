@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CCD8A860-9046-461C-B099-0C09E7DB0F23}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>OfficeDataManagementSystem.My.MyApplication</StartupObject>
+    <RootNamespace>OfficeDataManagementSystem</RootNamespace>
+    <AssemblyName>OfficeDataManagementSystem</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>OfficeDataManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>OfficeDataManagementSystem.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\Software\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI_WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveUser\ActiveUser.vb" />
+    <Compile Include="Cr_student.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cr_student.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ds_student.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_student.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_main.Designer.vb">
+      <DependentUpon>frm_main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_academic.Designer.vb">
+      <DependentUpon>frm_academic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_academic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_campus.Designer.vb">
+      <DependentUpon>frm_campus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_campus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_degree.Designer.vb">
+      <DependentUpon>frm_degree.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_degree.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_department.Designer.vb">
+      <DependentUpon>frm_department.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_department.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_score.Designer.vb">
+      <DependentUpon>frm_score.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_score.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_semester.Designer.vb">
+      <DependentUpon>frm_semester.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_semester.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_subject.Designer.vb">
+      <DependentUpon>frm_subject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_subject.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_student.Designer.vb">
+      <DependentUpon>frm_student.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_student.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_totalscore.Designer.vb">
+      <DependentUpon>frm_totalscore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_totalscore.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_user.Designer.vb">
+      <DependentUpon>frm_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_login.Designer.vb">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_skill.Designer.vb">
+      <DependentUpon>frm_skill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_skill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_registers.Designer.vb">
+      <DependentUpon>frm_registers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_registers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frm_generate.Designer.vb">
+      <DependentUpon>frm_generate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frm_generate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_report.Designer.vb">
+      <DependentUpon>frm_report.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm_report.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Forms\Payment.Designer.vb">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Payment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SQLCon.vb" />
+    <Compile Include="SQLControl.vb" />
+    <Compile Include="UserDao.vb" />
+    <Compile Include="UserModel.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Cr_student.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Cr_student.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_login.resx">
+      <DependentUpon>frm_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_main.resx">
+      <DependentUpon>frm_main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_academic.resx">
+      <DependentUpon>frm_academic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_campus.resx">
+      <DependentUpon>frm_campus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_degree.resx">
+      <DependentUpon>frm_degree.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_department.resx">
+      <DependentUpon>frm_department.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_score.resx">
+      <DependentUpon>frm_score.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_semester.resx">
+      <DependentUpon>frm_semester.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_subject.resx">
+      <DependentUpon>frm_subject.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_student.resx">
+      <DependentUpon>frm_student.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_totalscore.resx">
+      <DependentUpon>frm_totalscore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_user.resx">
+      <DependentUpon>frm_user.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_skill.resx">
+      <DependentUpon>frm_skill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_registers.resx">
+      <DependentUpon>frm_registers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frm_generate.resx">
+      <DependentUpon>frm_generate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_report.resx">
+      <DependentUpon>frm_report.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Payment.resx">
+      <DependentUpon>Payment.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ds_student.xsc">
+      <DependentUpon>ds_student.xsd</DependentUpon>
+    </None>
+    <None Include="ds_student.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_student.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="ds_student.xss">
+      <DependentUpon>ds_student.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rpitstlogo150.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-home-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maximize-window-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minimize-window-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RPI-LOGO-Last-edit-ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-male-user-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-key-35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-petition-32 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-more-info-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-department-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-mortarboard-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-school-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-graduation-scroll-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exam-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-elective-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-report-card-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-users-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-move-left-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-file-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-file-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-insert-button-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-remove-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reset-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-browse-folder-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-delete-bin-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-insert-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-update-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reset-28-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-browse-folder-28-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGO RPITST.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
